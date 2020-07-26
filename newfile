@@ -1,0 +1,186 @@
+
+PLAY [Check if a file is present if not create a dir with the same name] *******************
+
+TASK [Gathering Facts] *********************************************************************
+ok: [172.31.48.56]
+ok: [172.31.37.220]
+ok: [172.31.36.172]
+
+TASK [Check if a file is present] **********************************************************
+ok: [172.31.48.56]
+ok: [172.31.36.172]
+ok: [172.31.37.220]
+
+TASK [Display output of above module] ******************************************************
+ok: [172.31.37.220] => {
+    "result": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "atime": 1595560072.0998232, 
+            "attr_flags": "e", 
+            "attributes": [
+                "extents"
+            ], 
+            "block_size": 4096, 
+            "blocks": 8, 
+            "charset": "us-ascii", 
+            "checksum": "a471af8c27666a098c9fbb3ee302d29d77e18f55", 
+            "ctime": 1593444010.3203914, 
+            "dev": 51713, 
+            "device_type": 0, 
+            "executable": true, 
+            "exists": true, 
+            "gid": 1111, 
+            "gr_name": "Lakshmi", 
+            "inode": 263697, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "mimetype": "text/plain", 
+            "mode": "0760", 
+            "mtime": 1593444010.3203914, 
+            "nlink": 1, 
+            "path": "/home/ubuntu/file1", 
+            "pw_name": "Sai", 
+            "readable": true, 
+            "rgrp": true, 
+            "roth": false, 
+            "rusr": true, 
+            "size": 204, 
+            "uid": 1001, 
+            "version": "1645857576", 
+            "wgrp": true, 
+            "woth": false, 
+            "writeable": true, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": true
+        }
+    }
+}
+ok: [172.31.36.172] => {
+    "result": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "atime": 1595560072.1033351, 
+            "attr_flags": "e", 
+            "attributes": [
+                "extents"
+            ], 
+            "block_size": 4096, 
+            "blocks": 8, 
+            "charset": "us-ascii", 
+            "checksum": "78978fde26c320790c02042206a7e01358024c39", 
+            "ctime": 1593444010.321643, 
+            "dev": 51713, 
+            "device_type": 0, 
+            "executable": true, 
+            "exists": true, 
+            "gid": 1111, 
+            "gr_name": "Lakshmi", 
+            "inode": 286334, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "mimetype": "text/plain", 
+            "mode": "0760", 
+            "mtime": 1593444010.321643, 
+            "nlink": 1, 
+            "path": "/home/ubuntu/file1", 
+            "pw_name": "Sai", 
+            "readable": true, 
+            "rgrp": true, 
+            "roth": false, 
+            "rusr": true, 
+            "size": 204, 
+            "uid": 1001, 
+            "version": "4045329963", 
+            "wgrp": true, 
+            "woth": false, 
+            "writeable": true, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": true
+        }
+    }
+}
+ok: [172.31.48.56] => {
+    "result": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "atime": 1595560329.6360781, 
+            "attr_flags": "e", 
+            "attributes": [
+                "extents"
+            ], 
+            "block_size": 4096, 
+            "blocks": 8, 
+            "charset": "binary", 
+            "ctime": 1595560329.6360781, 
+            "dev": 51713, 
+            "device_type": 0, 
+            "executable": true, 
+            "exists": true, 
+            "gid": 0, 
+            "gr_name": "root", 
+            "inode": 271281, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": true, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": false, 
+            "issock": false, 
+            "isuid": false, 
+            "mimetype": "inode/directory", 
+            "mode": "0755", 
+            "mtime": 1595560329.6360781, 
+            "nlink": 2, 
+            "path": "/home/ubuntu/file1", 
+            "pw_name": "root", 
+            "readable": true, 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 4096, 
+            "uid": 0, 
+            "version": "4160210667", 
+            "wgrp": false, 
+            "woth": false, 
+            "writeable": true, 
+            "wusr": true, 
+            "xgrp": true, 
+            "xoth": true, 
+            "xusr": true
+        }
+    }
+}
+
+TASK [Create a dir called file1 if file1 file is not present] ******************************
+skipping: [172.31.37.220]
+skipping: [172.31.36.172]
+skipping: [172.31.48.56]
+
+PLAY RECAP *********************************************************************************
+172.31.36.172              : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+172.31.37.220              : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+172.31.48.56               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+

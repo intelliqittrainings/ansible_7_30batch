@@ -1,0 +1,7 @@
+---
+a: firewalld
+b: present
+c: no
+e: apache2
+f: restarted
+...

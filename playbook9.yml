@@ -1,0 +1,10 @@
+---
+- name: Install firealld using hostscope varibales
+  hosts: 172.31.36.172
+  tasks:
+   - name: Install firewalld
+     apt:
+      name: "{{a}}"
+      state: "{{b}}"
+      update_cache: "{{c}}"
+...      

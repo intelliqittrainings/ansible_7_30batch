@@ -1,0 +1,8 @@
+---
+- name: Restart apache2 using host variables
+  hosts: 172.31.36.172
+  tasks:
+   - name: Restart apache2
+     service:
+      name: "{{e}}"
+      state: "{{f}}"

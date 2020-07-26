@@ -1,0 +1,15 @@
+---
+- name: Error Handling
+  hosts: all
+  tasks:
+   - block:
+      - name: Install git using apt
+        apt:
+         name: git
+         state: present
+     rescue:
+      - name: Install git using yum
+        yum:
+         name: git
+         state: present
+

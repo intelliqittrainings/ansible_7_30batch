@@ -1,0 +1,20 @@
+---
+- name: Create multiple users and copy multiple files/dirs into users home dir
+  hosts: all
+  tasks:
+   - name: Create multiple users
+     user:
+      name: "{{item.a}}"
+      password: "{{item.b}}"
+      home: "{{item.c}}"
+     with_items:
+      - {a: Ramu,b: intelliqit,c: /home/Ramu}
+      - {a: Rani,b: intelliqit,c: /home/ubuntu/Rani}
+   - name: Copy files into the above users home dirs
+     copy:
+      src: "{{item.a}}"
+      dest: "{{item.b}}"
+     with_items:
+      - {a: /etc/passwd,b: /home/Ramu}
+      - {a: /etc/group,b: /home/ubuntu/Rani}
+

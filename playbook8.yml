@@ -1,0 +1,11 @@
+---
+- name: User creation with host variables
+  hosts: servers
+  tasks:
+   - name: User Creation
+     user:
+      name: "{{a}}"
+      password: "{{b}}"
+      uid: "{{c}}"
+      home: "{{d}}"
+

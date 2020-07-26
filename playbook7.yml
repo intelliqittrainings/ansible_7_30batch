@@ -1,0 +1,14 @@
+---
+- name: Using playsope varibles for s/w installtions
+  hosts: appserver
+  vars:
+   - a: tomcat8
+   - b: present
+   - c: yes
+  tasks:
+   - name: Install s/w applications
+     apt:
+      name: "{{a}}"
+      state: "{{b}}"
+      update_cache: "{{c}}"
+...

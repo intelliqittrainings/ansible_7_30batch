@@ -1,0 +1,14 @@
+---
+- name: Install git and downlaod a remote git repo
+  hosts: all
+  tasks:
+   - name: Install git
+     apt:
+      name: git
+      state: present
+      update_cache: yes
+   - name: Download a remote git repo
+     git:
+      repo: https://github.com/intelliqittrainings/Kubernetes.git
+      dest: /home/ubuntu/git-new
+...
