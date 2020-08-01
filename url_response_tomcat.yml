@@ -1,0 +1,8 @@
+--- 
+ - name: Check url response of tomcat on all managed nodes
+   uri:
+    url: "{{item.j}}"
+    status_code: "{{item.k}}"
+   with_items:
+    - {j: "{{j}}",k: "{{k}}"}
+    - {j: "{{l}}",k: "{{k}}"}

@@ -1,0 +1,10 @@
+---
+- name: Check url resposne of apache2
+  uri:
+   url: "{{item}}"
+   status_code: 200
+  with_items:
+   - http://172.31.10.86
+   - http://172.31.10.94
+...
+

@@ -1,0 +1,7 @@
+---
+- name: Install tomcat8
+  apt:
+   name: "{{a}}"
+   state: "{{b}}"
+   update_cache: "{{c}}"
+...

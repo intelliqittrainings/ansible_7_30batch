@@ -1,8 +1,14 @@
 ---
-
-a: Usha
-b: intelliqit
-c: 1470
-d: /home/Usha
-
+a: tomcat8
+b: present
+c: no
+d: /home/ubuntu/ansible_7_30batch/tomcat-users.xml
+e: /etc/tomcat8
+f: 8080
+g: 9090
+h: /etc/tomcat8/server.xml
+i: restarted
+j: http://172.31.10.86:9090
+l: http://172.31.10.94:9090
+k: 200
 ...
